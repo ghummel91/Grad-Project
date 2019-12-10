@@ -407,7 +407,6 @@ drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 15:57 History
 # The bash worked! Here is the scp command I utilized from my local terminal
 C:\Users\User> scp inbre025@teton.uwyo.edu:/project/inbre-train/inbre025/project C:\Users\User\Downloads
 
-
                               NOTICE TO USERS
 =============================================================================
 This is a University of Wyoming computer system, which may be accessed and
@@ -517,3 +516,117 @@ Password:
 Resetting modules to system default
 PedCon1_R2_fastqc.html                                                                100%  265KB 668.5KB/s   00:00
 # Back to the teton remote terminal
+[inbre025@tlog2 project]$ cd Grad-Project/
+[inbre025@tlog2 Grad-Project]$ ls -l
+total 0
+-rw-rw-r-- 1 inbre025 inbre-train 114 Dec  9 16:00 Project_Writeup.md
+[inbre025@tlog2 Grad-Project]$ vim Project_Writeup.md
+[inbre025@tlog2 Grad-Project]$ [inbre025@tlog2 Grad-Project]$ vim Project_Writeup.md
+# I answered Question 1 in the Project_Writeup file I started earlier
+# I attempted to push Project_Writeup to Github
+[inbre025@tlog2 Grad-Project]$ git remote add origin https://github.com/ghummel91/Grad-Project
+fatal: remote origin already exists.
+[inbre025@tlog2 Grad-Project]$ git config --list
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/ghummel91/Grad-Project.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+[inbre025@tlog2 Grad-Project]$ git push -u origin master
+
+(gnome-ssh-askpass:42636): Gtk-WARNING **: 17:44:54.864: cannot open display:
+error: unable to read askpass response from '/usr/libexec/openssh/gnome-ssh-askpass'
+Username for 'https://github.com': ghummel91
+
+(gnome-ssh-askpass:42660): Gtk-WARNING **: 17:45:00.035: cannot open display:
+error: unable to read askpass response from '/usr/libexec/openssh/gnome-ssh-askpass'
+Password for 'https://ghummel91@github.com':
+To https://github.com/ghummel91/Grad-Project.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/ghummel91/Grad-Project.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first merge the remote changes (e.g.,
+hint: 'git pull') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+# I did not pull this README.md file to my terminal, and did this here
+[inbre025@tlog2 Grad-Project]$ git pull origin master
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From https://github.com/ghummel91/Grad-Project
+ * branch            master     -> FETCH_HEAD
+Updating 3f831f9..fc6a973
+Fast-forward
+ README.md | 519 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 519 insertions(+)
+ create mode 100644 README.md
+[inbre025@tlog2 Grad-Project]$ ls -l
+total 64
+-rw-rw-r-- 1 inbre025 inbre-train  3026 Dec  9 17:42 Project_Writeup.md
+-rw-rw-r-- 1 inbre025 inbre-train 25869 Dec  9 17:45 README.md
+[inbre025@tlog2 Grad-Project]$ vi Project_Writeup.md
+
+[2]+  Stopped                 vim Project_Writeup.md
+[inbre025@tlog2 Grad-Project]$
+[2]+  Stopped                 vim Project_Writeup.md
+[inbre025@tlog2 Grad-Project]$ git add Project_Writeup.md
+[inbre025@tlog2 Grad-Project]$ git commit -m "Question 1"
+[master ec4d052] Question 1
+ Committer: INBRE Training Account <inbre025@tlog2.cluster>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+[inbre025@tlog2 Grad-Project]$ git push origin master
+
+(gnome-ssh-askpass:43092): Gtk-WARNING **: 17:46:26.708: cannot open display:
+error: unable to read askpass response from '/usr/libexec/openssh/gnome-ssh-askpass'
+Username for 'https://github.com': ghummel91
+
+(gnome-ssh-askpass:43101): Gtk-WARNING **: 17:46:30.197: cannot open display:
+error: unable to read askpass response from '/usr/libexec/openssh/gnome-ssh-askpass'
+Password for 'https://ghummel91@github.com':
+Counting objects: 5, done.
+Delta compression using up to 56 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.38 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/ghummel91/Grad-Project.git
+   fc6a973..ec4d052  master -> master
+   # Despite these errors, I was able to successfully push my Project_Writeup changes to Github. I verified that this push worked by checking my GIthub repository.
+[inbre025@tlog2 Grad-Project]$ history >History/Project_session1.sh
+-bash: History/Project_session1.sh: No such file or directory
+[inbre025@tlog2 Grad-Project]$ cd ..
+[inbre025@tlog2 project]$ ls -l
+total 7029824
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec  9 17:45 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 15:57 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+[inbre025@tlog2 project]$ history > History/Project_session1.sh
+[inbre025@tlog2 project]$ cd History/
+[inbre025@tlog2 History]$ ls -l
+total 64
+-rw-rw-r-- 1 inbre025 inbre-train 14134 Dec  9 17:48 Project_session1.sh
+[inbre025@tlog2 History]$
+# It took a few tries, but I was able to save my history like we did in class to a History folder within the inbre025 training account.
