@@ -630,3 +630,634 @@ total 64
 -rw-rw-r-- 1 inbre025 inbre-train 14134 Dec  9 17:48 Project_session1.sh
 [inbre025@tlog2 History]$
 # It took a few tries, but I was able to save my history like we did in class to a History folder within the inbre025 training account.
+#
+# Begin session 2
+esetting modules to system default
+[inbre025@tlog1 ~]$ pwd
+/home/inbre025
+[inbre025@tlog1 ~]$ ls -l
+total 0
+[inbre025@tlog1 ~]$ ls
+[inbre025@tlog1 ~]$ cd ..
+[inbre025@tlog1 home]$ ls -l
+pwd
+[inbre025@tlog1 home]$ pwd
+/home
+[inbre025@tlog1 home]$ cd inbre025
+[inbre025@tlog1 ~]$ ls
+[inbre025@tlog1 ~]$ mkdir History
+[inbre025@tlog1 ~]$ ls
+History
+[inbre025@tlog1 ~]$ cd inbre-train/inbre025
+-bash: cd: inbre-train/inbre025: No such file or directory
+[inbre025@tlog1 ~]$ cd /project
+[inbre025@tlog1 project]$ cd inbre-train/inbre025
+[inbre025@tlog1 inbre025]$ pwd
+/project/inbre-train/inbre025
+[inbre025@tlog1 inbre025]$ ls
+LearnLinux  project
+[inbre025@tlog1 inbre025]$ cd project/
+[inbre025@tlog1 project]$ ls -l
+total 7029824
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec  9 17:55 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+[inbre025@tlog1 project]$ cd Grad-Project/
+[inbre025@tlog1 Grad-Project]$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/ghummel91/Grad-Project
+ * branch            master     -> FETCH_HEAD
+Updating ec4d052..b2a8b39
+Fast-forward
+ README.md | 115 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 114 insertions(+), 1 deletion(-)
+[inbre025@tlog1 Grad-Project]$ ls -l
+total 64
+-rw-rw-r-- 1 inbre025 inbre-train  3026 Dec  9 17:42 Project_Writeup.md
+-rw-rw-r-- 1 inbre025 inbre-train 31776 Dec 14 21:13 README.md
+[inbre025@tlog1 Grad-Project]$ vim Project_Writeup.md
+[inbre025@tlog1 Grad-Project]$ vim README.md
+
+[1]+  Stopped                 vim README.md
+[inbre025@tlog1 Grad-Project]$
+[1]+  Stopped                 vim README.md
+[inbre025@tlog1 Grad-Project]$ vim README.md
+[inbre025@tlog1 Grad-Project]$ git push origin master
+
+(gnome-ssh-askpass:14595): Gtk-WARNING **: 21:24:01.005: cannot open display:
+error: unable to read askpass response from '/usr/libexec/openssh/gnome-ssh-askpass'
+Username for 'https://github.com': ghummel91
+
+(gnome-ssh-askpass:14638): Gtk-WARNING **: 21:24:09.436: cannot open display:
+error: unable to read askpass response from '/usr/libexec/openssh/gnome-ssh-askpass'
+Password for 'https://ghummel91@github.com':
+Everything up-to-date
+[inbre025@tlog1 Grad-Project]$ ls *fastqc*
+ls: cannot access *fastqc*: No such file or directory
+[inbre025@tlog1 Grad-Project]$ ls -l
+total 128
+-rw-rw-r-- 1 inbre025 inbre-train 25625 Dec 14 21:23 1
+-rw-rw-r-- 1 inbre025 inbre-train  3026 Dec 14 21:15 Project_Writeup.md
+-rw-rw-r-- 1 inbre025 inbre-train 31776 Dec 14 21:23 README.md
+[inbre025@tlog1 Grad-Project]$ rm 1
+[inbre025@tlog1 Grad-Project]$ ls
+Project_Writeup.md  README.md
+[inbre025@tlog1 Grad-Project]$ cd ..
+[inbre025@tlog1 project]$ ls
+Grad-Project  PedCon1_R1_fastqc.html  PedCon1_R1.fastq.gz     PedCon1_R2_fastqc.zip  RNAfastqc1.sh
+History       PedCon1_R1_fastqc.zip   PedCon1_R2_fastqc.html  PedCon1_R2.fastq.gz    slurm-3634212.out
+[inbre025@tlog1 project]$ ls*fastqc*
+-bash: ls*fastqc*: command not found
+# It took me a little while to figure out where I was, and re-establish my connection with my GIT repository
+[inbre025@tlog1 project]$ vim Trim.sh
+[inbre025@tlog1 project]$ vim Trim.sh
+[inbre025@tlog1 project]$ sbatch Trim.sh
+Submitted batch job 3652070
+#
+# First attempt at trimming
+[inbre025@tlog1 project]$ sbatch --test-only Trim.sh
+sbatch: Job 3652071 to start at 2019-12-14T22:04:09 using 4 processors on nodes mhm01 in partition inv-inbre
+[inbre025@tlog1 project]$ ls -l
+total 7029824
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        388 Dec 14 22:01 Trim.sh
+[inbre025@tlog1 project]$ sbatch --test-only Trim.sh
+sbatch: Job 3652072 to start at 2019-12-14T22:09:33 using 4 processors on nodes mhm01 in partition inv-inbre
+[inbre025@tlog1 project]$ ls -l
+total 7029824
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        388 Dec 14 22:01 Trim.sh
+[inbre025@tlog1 project]$ cat slurm-3652070.out
+starting up
+module loaded
+Unknown option --threads
+Usage:
+       PE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-quiet] [-validatePairs] [-basein <inputBase> | <inputFile1> <inputFile2>] [-baseout <outputBase> | <outputFile1P> <outputFile1U> <outputFile2P> <outputFile2U>] <trimmer1>...
+   or:
+       SE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-quiet] <inputFile> <outputFile> <trimmer1>...
+   or:
+       -version
+finished
+ # Once I had my reads downloaded through scp with the same protocol utilized in session 1 I visualized my .html file but didn't see a difference in my trims
+ # No difference detected. I ran the Trim.sh file a few times before realizing I missed an essential part of my code
+ inbre025@tlog1 project]$ vi Trim.sh
+[inbre025@tlog1 project]$ sbatch Trim.sh
+Submitted batch job 3652073
+[inbre025@tlog1 project]$ ls -l
+total 7029824
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        403 Dec 14 22:20 Trim.sh
+[inbre025@tlog1 project]$ vi Trim.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ sbatch Trim.sh
+Submitted batch job 3652074
+[inbre025@tlog1 project]$ cd Grad-Project/
+[inbre025@tlog1 Grad-Project]$ ls -l
+total 64
+-rw-rw-r-- 1 inbre025 inbre-train  3026 Dec 14 21:15 Project_Writeup.md
+-rw-rw-r-- 1 inbre025 inbre-train 31776 Dec 14 21:23 README.md
+[inbre025@tlog1 Grad-Project]$ cd ..
+[inbre025@tlog1 project]$ ls -l
+total 7029824
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        368 Dec 14 22:28 Trim.sh
+[inbre025@tlog1 project]$ cat slurm-3652074
+cat: slurm-3652074: No such file or directory
+[inbre025@tlog1 project]$ cat slurm-3652073.out
+starting up
+module loaded
+Unknown option --threads
+Usage:
+       PE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-quiet] [-validatePairs] [-basein <inputBase> | <inputFile1> <inputFile2>] [-baseout <outputBase> | <outputFile1P> <outputFile1U> <outputFile2P> <outputFile2U>] <trimmer1>...
+   or:
+       SE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-quiet] <inputFile> <outputFile> <trimmer1>...
+   or:
+       -version
+finished
+ [inbre025@tlog1 project]$ vi Trim.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ sbatch Trim.sh
+Submitted batch job 3652075
+[inbre025@tlog1 project]$ ls -l
+total 7029824
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train        450 Dec 14 22:35 Trim.sh
+[inbre025@tlog1 project]$ cat slurm-3652075.out
+starting up
+module loaded
+Unknown option --threads
+Usage:
+       PE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-quiet] [-validatePairs] [-basein <inputBase> | <inputFile1> <inputFile2>] [-baseout <outputBase> | <outputFile1P> <outputFile1U> <outputFile2P> <outputFile2U>] <trimmer1>...
+   or:
+       SE [-version] [-threads <threads>] [-phred33|-phred64] [-trimlog <trimLogFile>] [-quiet] <inputFile> <outputFile> <trimmer1>...
+   or:
+       -version
+finished
+[inbre025@tlog1 project]$ vi Trim.sh
+[inbre025@tlog1 project]$ vi Trim.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ sbatch Trim.sh
+Submitted batch job 3652076
+[inbre025@tlog1 project]$ ls -l Grad-Project/
+total 64
+-rw-rw-r-- 1 inbre025 inbre-train  3026 Dec 14 21:15 Project_Writeup.md
+-rw-rw-r-- 1 inbre025 inbre-train 31776 Dec 14 21:23 README.md
+[inbre025@tlog1 project]$ ls -l
+total 7029824
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train        499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train        465 Dec 14 22:54 Trim.sh
+[inbre025@tlog1 project]$ ls -l
+total 7029824
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train        499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train        465 Dec 14 22:54 Trim.sh
+[inbre025@tlog1 project]$ vi Trim.sh
+[inbre025@tlog1 project]$ nano Trim.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ sbatch Trim.sh
+Submitted batch job 3652077
+[inbre025@tlog1 project]$ cd History/
+[inbre025@tlog1 History]$ ls -l
+total 64
+-rw-rw-r-- 1 inbre025 inbre-train 14134 Dec  9 17:48 Project_session1.sh
+[inbre025@tlog1 History]$ cd ..
+[inbre025@tlog1 project]$ ls -l
+total 14935744
+ # Many attempts later, I realized my errors in generating the trimmed files were due to a problem with my .sh file. I had an extra hyphen in one line that messed up everything, but finally found it.
+-rw-rw-r-- 1 inbre025 inbre-train 3901218816 Dec 14 23:10 fwd_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train  194338816 Dec 14 23:10 fwd_unpair.fq
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train 3830177792 Dec 14 23:10 rev_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train  169828352 Dec 14 23:10 rev_unpair.fq
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train        499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train        672 Dec 14 23:10 slurm-3652077.out
+-rw-rw-r-- 1 inbre025 inbre-train        465 Dec 14 23:08 Trim.sh
+[inbre025@tlog1 project]$ cat Trim,sh
+cat: Trim,sh: No such file or directory
+[inbre025@tlog1 project]$ cat Trim.sh
+#!/bin/bash
+#SBATCH -J Trim
+#SBATCH -n 1
+#SBATCH --cpus-per-task=4
+#SBATCH -t 30:00
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=ghummel@uwyo.edu
+
+#SBATCH --account=inbre-train
+
+echo "starting up"
+
+module load swset gcc
+module load trimmomatic
+
+echo "modules loaded"
+
+trimmomatic PE \
+-threads 4 \
+PedCon1_R1.fastq.gz PedCon1_R2.fastq.gz \
+./fwd_pair.fq ./fwd_unpair.fq ./rev_pair.fq ./rev_unpair.fq \
+HEADCROP:10 \
+SLIDINGWINDOW:4:24 \
+MINLEN:80
+echo "finished."
+[inbre025@tlog1 project]$ module load gcc fastqc
+[inbre025@tlog1 project]$ vim FwRev.sh
+
+[2]+  Stopped                 vim FwRev.sh
+[inbre025@tlog1 project]$
+[2]+  Stopped                 vim FwRev.sh
+[inbre025@tlog1 project]$ vim FwRev.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ vim FqRev.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ vim FqRev.sh
+[inbre025@tlog1 project]$ blast FqRev.sh
+-bash: blast: command not found
+[inbre025@tlog1 project]$ sbatch FqRev.sh
+Submitted batch job 3652078
+[inbre025@tlog1 project]$ ls -l
+total 14935744
+-rw-rw-r-- 1 inbre025 inbre-train        312 Dec 14 23:26 FqRev.sh
+-rw-rw-r-- 1 inbre025 inbre-train 3901218816 Dec 14 23:10 fwd_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train  194338816 Dec 14 23:10 fwd_unpair.fq
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train 3830177792 Dec 14 23:10 rev_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train  169828352 Dec 14 23:10 rev_unpair.fq
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train        499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train        672 Dec 14 23:10 slurm-3652077.out
+-rw-rw-r-- 1 inbre025 inbre-train         59 Dec 14 23:26 slurm-3652078.out
+-rw-rw-r-- 1 inbre025 inbre-train        465 Dec 14 23:08 Trim.sh
+# I messed up my time allotment in the code, and running the FastQC on my paired reads didn't work at first
+[inbre025@tlog1 project]$ ls -l
+total 14935744
+-rw-rw-r-- 1 inbre025 inbre-train        312 Dec 14 23:26 FqRev.sh
+-rw-rw-r-- 1 inbre025 inbre-train 3901218816 Dec 14 23:10 fwd_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train  194338816 Dec 14 23:10 fwd_unpair.fq
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train 3830177792 Dec 14 23:10 rev_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train  169828352 Dec 14 23:10 rev_unpair.fq
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train        499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train        672 Dec 14 23:10 slurm-3652077.out
+-rw-rw-r-- 1 inbre025 inbre-train       1123 Dec 14 23:27 slurm-3652078.out
+-rw-rw-r-- 1 inbre025 inbre-train        465 Dec 14 23:08 Trim.sh
+[inbre025@tlog1 project]$ vim FqRev.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ sbatch FqRev.sh
+Submitted batch job 3652079
+[inbre025@tlog1 project]$ ls -l
+total 14936384
+-rw-rw-r-- 1 inbre025 inbre-train        316 Dec 14 23:34 FqRev.sh
+-rw-rw-r-- 1 inbre025 inbre-train 3901218816 Dec 14 23:10 fwd_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train  194338816 Dec 14 23:10 fwd_unpair.fq
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     254527 Dec 14 23:36 rev_pair_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     378985 Dec 14 23:36 rev_pair_fastqc.zip
+-rw-rw-r-- 1 inbre025 inbre-train 3830177792 Dec 14 23:10 rev_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train  169828352 Dec 14 23:10 rev_unpair.fq
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train        499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train        672 Dec 14 23:10 slurm-3652077.out
+-rw-rw-r-- 1 inbre025 inbre-train       1123 Dec 14 23:27 slurm-3652078.out
+-rw-rw-r-- 1 inbre025 inbre-train       1973 Dec 14 23:36 slurm-3652079.out
+-rw-rw-r-- 1 inbre025 inbre-train        465 Dec 14 23:08 Trim.sh
+# This only generated one of my FastQC html files (rev), and it wasn't to the trim specifications I wanted, but matched what we did in class to try to get my code to run at all. I at least got that far! 
+[inbre025@tlog1 project]$ vim FqRev.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ vim Trim.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ sbatch Trim.sh
+Submitted batch job 3652080
+# I edited the Trim.sh file to match my trim specifications (SLIDINGWINDOW:4:28)
+[inbre025@tlog1 project]$ ls -l
+total 14936384
+-rw-rw-r-- 1 inbre025 inbre-train        316 Dec 14 23:42 FqRev.sh
+-rw-rw-r-- 1 inbre025 inbre-train 3901218816 Dec 14 23:10 fwd_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train  194338816 Dec 14 23:10 fwd_unpair.fq
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     254527 Dec 14 23:36 rev_pair_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     378985 Dec 14 23:36 rev_pair_fastqc.zip
+-rw-rw-r-- 1 inbre025 inbre-train 3830177792 Dec 14 23:10 rev_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train  169828352 Dec 14 23:10 rev_unpair.fq
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train        499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train        672 Dec 14 23:10 slurm-3652077.out
+-rw-rw-r-- 1 inbre025 inbre-train       1123 Dec 14 23:27 slurm-3652078.out
+-rw-rw-r-- 1 inbre025 inbre-train       1973 Dec 14 23:36 slurm-3652079.out
+-rw-rw-r-- 1 inbre025 inbre-train        593 Dec 14 23:43 slurm-3652080.out
+-rw-rw-r-- 1 inbre025 inbre-train        439 Dec 14 23:43 Trim.sh
+[inbre025@tlog1 project]$ cat slurm-3652080.out
+starting up
+modules loaded
+TrimmomaticPE: Started with arguments:
+ -threads 4 PedCon1_R1.fastq.gz PedCon1_R2.fastq.gz ./fwd_pair.fq ./fwd_unpair.fq ./rev_pair.fq ./rev_unpair.fq SLIDINGWINDOW:4:28 echo finished.
+Exception in thread "main" java.lang.RuntimeException: Unknown trimmer: echo
+        at org.usadellab.trimmomatic.trim.TrimmerFactory.makeTrimmer(TrimmerFactory.java:70)
+        at org.usadellab.trimmomatic.Trimmomatic.createTrimmers(Trimmomatic.java:59)
+        at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:536)
+        at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
+[inbre025@tlog1 project]$ sbatch FqRev.sh
+Submitted batch job 3652082
+# This appeared to have run and overwritten my previous files, so I attempted to run the FqRev.sh file again as well
+[inbre025@tlog1 project]$ scancel slurm-3652082.out
+scancel: error: Invalid job id slurm-3652082.out
+[inbre025@tlog1 project]$ sbatch Trim.sh
+Submitted batch job 3652083
+[inbre025@tlog1 project]$ ls -l
+total 10045120
+-rw-rw-r-- 1 inbre025 inbre-train        316 Dec 14 23:42 FqRev.sh
+-rw-rw-r-- 1 inbre025 inbre-train 1553293312 Dec 14 23:57 fwd_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train   22700032 Dec 14 23:57 fwd_unpair.fq
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     254527 Dec 14 23:54 rev_pair_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     378985 Dec 14 23:54 rev_pair_fastqc.zip
+-rw-rw-r-- 1 inbre025 inbre-train 1499709440 Dec 14 23:57 rev_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train   15228928 Dec 14 23:57 rev_unpair.fq
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train        499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train        672 Dec 14 23:10 slurm-3652077.out
+-rw-rw-r-- 1 inbre025 inbre-train       1123 Dec 14 23:27 slurm-3652078.out
+-rw-rw-r-- 1 inbre025 inbre-train       1973 Dec 14 23:36 slurm-3652079.out
+-rw-rw-r-- 1 inbre025 inbre-train        593 Dec 14 23:43 slurm-3652080.out
+-rw-rw-r-- 1 inbre025 inbre-train       1973 Dec 14 23:54 slurm-3652082.out
+-rw-rw-r-- 1 inbre025 inbre-train        234 Dec 14 23:57 slurm-3652083.out
+-rw-rw-r-- 1 inbre025 inbre-train        440 Dec 14 23:54 Trim.sh
+# It didn't work. There must have been an issue in my echo command, tried to cancel slurm job, and edited Trim.sh again.
+[inbre025@tlog1 project]$ ls -l
+total 10045120
+-rw-rw-r-- 1 inbre025 inbre-train        316 Dec 14 23:42 FqRev.sh
+-rw-rw-r-- 1 inbre025 inbre-train 1553293312 Dec 14 23:57 fwd_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train   22700032 Dec 14 23:57 fwd_unpair.fq
+drwxrwsr-x 3 inbre025 inbre-train       4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train       4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train     260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train     254527 Dec 14 23:54 rev_pair_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train     378985 Dec 14 23:54 rev_pair_fastqc.zip
+-rw-rw-r-- 1 inbre025 inbre-train 1499709440 Dec 14 23:57 rev_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train   15228928 Dec 14 23:57 rev_unpair.fq
+-rw-rw-r-- 1 inbre025 inbre-train        331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train       1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train        489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train        498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train        499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train        672 Dec 14 23:10 slurm-3652077.out
+-rw-rw-r-- 1 inbre025 inbre-train       1123 Dec 14 23:27 slurm-3652078.out
+-rw-rw-r-- 1 inbre025 inbre-train       1973 Dec 14 23:36 slurm-3652079.out
+-rw-rw-r-- 1 inbre025 inbre-train        593 Dec 14 23:43 slurm-3652080.out
+-rw-rw-r-- 1 inbre025 inbre-train       1973 Dec 14 23:54 slurm-3652082.out
+-rw-rw-r-- 1 inbre025 inbre-train        234 Dec 14 23:57 slurm-3652083.out
+-rw-rw-r-- 1 inbre025 inbre-train        440 Dec 14 23:54 Trim.sh
+[inbre025@tlog1 project]$ ls s-l
+ls: cannot access s-l: No such file or directory
+[inbre025@tlog1 project]$ ls -l
+total 35428992
+-rw-rw-r-- 1 inbre025 inbre-train         316 Dec 14 23:42 FqRev.sh
+-rw-rw-r-- 1 inbre025 inbre-train 14594126086 Dec 14 23:59 fwd_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train   252352135 Dec 14 23:59 fwd_unpair.fq
+drwxrwsr-x 3 inbre025 inbre-train        4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train        4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train      260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train      726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train  3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train      271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train      741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train  3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train      254527 Dec 14 23:54 rev_pair_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train      378985 Dec 14 23:54 rev_pair_fastqc.zip
+-rw-rw-r-- 1 inbre025 inbre-train 14057544292 Dec 14 23:59 rev_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train   175918813 Dec 14 23:59 rev_unpair.fq
+-rw-rw-r-- 1 inbre025 inbre-train         331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train        1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train         498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train         498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train         489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train         498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train         499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train         672 Dec 14 23:10 slurm-3652077.out
+-rw-rw-r-- 1 inbre025 inbre-train        1123 Dec 14 23:27 slurm-3652078.out
+-rw-rw-r-- 1 inbre025 inbre-train        1973 Dec 14 23:36 slurm-3652079.out
+-rw-rw-r-- 1 inbre025 inbre-train         593 Dec 14 23:43 slurm-3652080.out
+-rw-rw-r-- 1 inbre025 inbre-train        1973 Dec 14 23:54 slurm-3652082.out
+-rw-rw-r-- 1 inbre025 inbre-train         447 Dec 14 23:59 slurm-3652083.out
+-rw-rw-r-- 1 inbre025 inbre-train         440 Dec 14 23:54 Trim.sh
+[inbre025@tlog1 project]$ vim FqRev.sh
+[inbre025@tlog1 project]$ sbatch FqRev.sh
+Submitted batch job 3652084
+# Trim ran, running FqRev.sh
+[inbre025@tlog1 project]$ ls -l
+total 35430336
+-rw-rw-r-- 1 inbre025 inbre-train         317 Dec 15 00:03 FqRev.sh
+-rw-rw-r-- 1 inbre025 inbre-train      251101 Dec 15 00:09 fwd_pair_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train      711186 Dec 15 00:09 fwd_pair_fastqc.zip
+-rw-rw-r-- 1 inbre025 inbre-train 14594126086 Dec 14 23:59 fwd_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train   252352135 Dec 14 23:59 fwd_unpair.fq
+drwxrwsr-x 3 inbre025 inbre-train        4096 Dec 14 21:37 Grad-Project
+drwxrwsr-x 2 inbre025 inbre-train        4096 Dec  9 17:48 History
+-rw-rw-r-- 1 inbre025 inbre-train      260638 Dec  9 16:44 PedCon1_R1_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train      726558 Dec  9 16:44 PedCon1_R1_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train  3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train      271366 Dec  9 16:44 PedCon1_R2_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train      741959 Dec  9 16:44 PedCon1_R2_fastqc.zip
+-rwxr-xr-x 1 vchhatre inbre-train  3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+-rw-rw-r-- 1 inbre025 inbre-train      257854 Dec 15 00:09 rev_pair_fastqc.html
+-rw-rw-r-- 1 inbre025 inbre-train      721086 Dec 15 00:09 rev_pair_fastqc.zip
+-rw-rw-r-- 1 inbre025 inbre-train 14057544292 Dec 14 23:59 rev_pair.fq
+-rw-rw-r-- 1 inbre025 inbre-train   175918813 Dec 14 23:59 rev_unpair.fq
+-rw-rw-r-- 1 inbre025 inbre-train         331 Dec  9 16:35 RNAfastqc1.sh
+-rw-rw-r-- 1 inbre025 inbre-train        1869 Dec  9 16:44 slurm-3634212.out
+-rw-rw-r-- 1 inbre025 inbre-train         498 Dec 14 22:02 slurm-3652070.out
+-rw-rw-r-- 1 inbre025 inbre-train         498 Dec 14 22:20 slurm-3652073.out
+-rw-rw-r-- 1 inbre025 inbre-train         489 Dec 14 22:28 slurm-3652074.out
+-rw-rw-r-- 1 inbre025 inbre-train         498 Dec 14 22:36 slurm-3652075.out
+-rw-rw-r-- 1 inbre025 inbre-train         499 Dec 14 22:54 slurm-3652076.out
+-rw-rw-r-- 1 inbre025 inbre-train         672 Dec 14 23:10 slurm-3652077.out
+-rw-rw-r-- 1 inbre025 inbre-train        1123 Dec 14 23:27 slurm-3652078.out
+-rw-rw-r-- 1 inbre025 inbre-train        1973 Dec 14 23:36 slurm-3652079.out
+-rw-rw-r-- 1 inbre025 inbre-train         593 Dec 14 23:43 slurm-3652080.out
+-rw-rw-r-- 1 inbre025 inbre-train        1973 Dec 14 23:54 slurm-3652082.out
+-rw-rw-r-- 1 inbre025 inbre-train         447 Dec 14 23:59 slurm-3652083.out
+-rw-rw-r-- 1 inbre025 inbre-train        1534 Dec 15 00:09 slurm-3652084.out
+-rw-rw-r-- 1 inbre025 inbre-train         440 Dec 14 23:54 Trim.sh
+# Got both forward and reverse html outputs, ran same scp protocol as the first time (session 1)
+[inbre025@tlog1 project]$ vim Trim.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ sbatch Trim.sh
+Submitted batch job 3652085
+[inbre025@tlog1 project]$ vim Trim.sh
+[inbre025@tlog1 project]$ [inbre025@tlog1 project]$ sbatch Trim.sh
+Submitted batch job 3652086
+# I wanted to add HEADCROP back into my Trim, but it failed at first
+# I kept receiving an error in my SLURM email stating I was out of memory. I do not know if this is due to my training account or not, but was unable to add my HEADCROP changes back into the original Trim.sh file
+[inbre025@tlog1 project]$ history > History/Project_session2.sh
+[inbre025@tlog1 project]$ ls -l History/
+total 128
+-rw-rw-r-- 1 inbre025 inbre-train 14134 Dec  9 17:48 Project_session1.sh
+-rw-rw-r-- 1 inbre025 inbre-train 16061 Dec 15 00:29 Project_session2.sh
+[inbre025@tlog1 project]$ scp C:\Users\User\Downloads/Hummel_CompBio_Project inbre@teton.uwyo.edu:/project/inbre-train/inbre025/project/Grad-Project
+ssh_exchange_identification: Connection closed by remote host
+# Saved history and tried to import my project write up onto Teton server, then realized the server did not allow this.
