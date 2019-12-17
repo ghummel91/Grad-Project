@@ -2,22 +2,22 @@
 Graduate Project for MOLB 5485
 # Documentation of code leading up to GitHub Repository creation
 # Finding where I am
-[inbre025@tlog2 ~]$ pwd
-/home/inbre025
-[inbre025@tlog2 ~]$ ls
-[inbre025@tlog2 ~]$ ls -l
-total 0
-[inbre025@tlog2 ~]$ cd /project
-[inbre025@tlog2 project]$ cd inbre-train/inbre025
-[inbre025@tlog2 inbre025]$ ls -l
-total 0
-drwxrwsr-x 4 nblouin  inbre-train 4096 Oct 29 11:22 LearnLinux
-drwxrwsr-x 2 vchhatre inbre-train 4096 Dec  2 10:04 project
-[inbre025@tlog2 inbre025]$ cd project/
-[inbre025@tlog2 project]$ ls -l
-total 7027712
--rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz
--rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz
+[inbre025@tlog2 ~]$ pwd \
+/home/inbre025 \
+[inbre025@tlog2 ~]$ ls \
+[inbre025@tlog2 ~]$ ls -l \
+total 0 \
+[inbre025@tlog2 ~]$ cd /project \
+[inbre025@tlog2 project]$ cd inbre-train/inbre025 \
+[inbre025@tlog2 inbre025]$ ls -l \
+total 0 \ 
+drwxrwsr-x 4 nblouin  inbre-train 4096 Oct 29 11:22 LearnLinux \
+drwxrwsr-x 2 vchhatre inbre-train 4096 Dec  2 10:04 project \
+[inbre025@tlog2 inbre025]$ cd project/ \
+[inbre025@tlog2 project]$ ls -l \
+total 7027712 \
+-rwxr-xr-x 1 vchhatre inbre-train 3532577648 Dec  2 10:04 PedCon1_R1.fastq.gz \
+-rwxr-xr-x 1 vchhatre inbre-train 3663769578 Dec  2 10:04 PedCon1_R2.fastq.gz \
 # First attempt at GitHub Repository creation
 [inbre025@tlog2 project]$ git --version
 git version 1.8.3.1
